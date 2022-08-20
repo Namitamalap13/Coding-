@@ -1,0 +1,19 @@
+show databases;
+create database Sales;
+use Sales;
+create table Supplier(id int not null ,name varchar(15) not null, city varchar(15) not null);
+describe Supplier;
+alter table Supplier add primary key(id);
+ insert into Supplier(id,name,city) values(1,'Jhon','Mumbai'),(2,'RamRaj','Pune');
+ select* from Supplier;
+ insert into Supplier(id,name,city) values(3,'Aman','Nagpur');
+ 
+ use Sales;
+ create table Parts(pno int not null primary key,pname varchar(15) not null,pdescirption varchar(30));
+ insert into Parts(pno,pname) values(1,'Nuts'),(2,'bolts');
+ select* from Parts;
+ 
+ 
+create table Supply(id int not null primary key,cost float ,pno int not null);
+insert into Supply(id,cost,pno) values(1,5000,2) ,(2,20000,1);
+select* from Supply;
